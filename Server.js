@@ -9,7 +9,8 @@ const mongoClient = mongodb.MongoClient;
 var ObjectID = mongodb.ObjectID;
 const col = "contacts";
 var db
-
+var distDir =__dirname + "/dist/meanrestfullapp/";
+app.use(express.static(distDir));
 mongoClient.connect('mongodb://localhost:27017', (err, database) => {
   if (err) return console.log(err);
   db = database.db("contact")

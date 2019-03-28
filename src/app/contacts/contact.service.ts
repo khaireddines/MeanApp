@@ -8,7 +8,7 @@ import { catchError, map, tap } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class ContactService {
-  private contactsUrl = 'http://localhost:3000/api/contacts';
+  private contactsUrl = '/api/contacts';
   
   constructor(private http: HttpClient) { }
   //get("/api/contacts")
