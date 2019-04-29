@@ -20,18 +20,18 @@ export class ContactDetailsComponent implements OnInit {
   createContact(contact: Contact) {
     
     this.ContactService.CreateContact(contact).subscribe((newContact) => {
-      this.createHandler(newContact);//bug
+      //this.createHandler(newContact);//bug
     })
   }
   updateContact(contact: Contact): void {
     this.ContactService.updateContact(contact).subscribe((updateContact) => {
-      this.updateHandler(updateContact);//bug
+      //this.updateHandler(updateContact);//bug
     })
   }
   deleteContact(contactId: String): void {
     
     this.ContactService.deleteContact(contactId).subscribe((deleteContact) => {
-      this.deleteHandler(deleteContact);//bug
+      //this.deleteHandler(deleteContact);//bug
     })
   }
 

@@ -1,0 +1,7 @@
+{
+    "name": "My Mean Full App - User Management -",
+    "start_url": "/",
+    "orientation": "portrait",
+    "scope": "/",
+    "display": "standalone"
+}
