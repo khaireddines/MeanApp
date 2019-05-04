@@ -21,7 +21,7 @@ export class ContactListComponent implements OnInit {
   }
   private getIndexOfContact =(contactId: String)=>{
     return this.contacts.findIndex((contact)=>{
-      return contact._id ===contactId;
+      return contact.id ===contactId;
     })
   }
   createNewContact():void {
@@ -51,7 +51,7 @@ export class ContactListComponent implements OnInit {
     return this.contacts;
   }
   updateContact=(contact :Contact)=>{
-    var idx=this.getIndexOfContact(contact._id);
+    var idx=this.getIndexOfContact(contact.id);
     if(idx !==-1){
       this.contacts[idx]=contact;
       this.selectContact(contact);

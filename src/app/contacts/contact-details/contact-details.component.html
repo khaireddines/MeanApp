@@ -26,9 +26,9 @@
         <input class="form-control" name="contact-phone-work" [(ngModel)]="contact.phone.work"
           placeholder="1234567890" />
       </div>
-      <button class="btn btn-primary" *ngIf="!contact._id" (click)="createContact(contact)">Create</button>
-      <button class="btn btn-info" *ngIf="contact._id" (click)="updateContact(contact)">Update</button>
-      <button class="btn btn-danger" *ngIf="contact._id" (click)="deleteContact(contact._id)">Delete</button>
+      <button class="btn btn-primary" *ngIf="!contact.id" (click)="createContact(contact)">Create</button>
+      <button class="btn btn-info" *ngIf="contact.id" (click)="updateContact(contact)">Update</button>
+      <button class="btn btn-danger" *ngIf="contact.id" (click)="deleteContact(contact.id)">Delete</button>
     </form>
     
   </div>

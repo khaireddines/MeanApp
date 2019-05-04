@@ -8,7 +8,7 @@ import { catchError, map, tap } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class ContactService {
-  private contactsUrl = '/api/contacts';
+  private contactsUrl = 'http://localhost:3000/api/contacts';
   
   constructor(private http: HttpClient) { }
   //get("/api/contacts")
@@ -27,12 +27,13 @@ export class ContactService {
   }
   //put("/api/contacts/:id")
   updateContact(updateContact: Contact): Observable<Contact[]> {
-    const url = `${this.contactsUrl}/${updateContact._id}`;
+    const url = `${this.contactsUrl}/${updateContact.id}`;
     return this.http.put<Contact[]>(url, updateContact);
   }
   //delete("/api/contacts/:id")
   deleteContact(id: String):Observable<Contact[]>{
     const url = `${this.contactsUrl}/${id}`;
+    console.log(id);
     return this.http.delete<Contact[]>(url);
   }
 
